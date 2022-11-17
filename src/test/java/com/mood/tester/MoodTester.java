@@ -2,6 +2,7 @@ package com.mood.tester;
 
 import com.mood.analyzer.MoodAnalyzer;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoodTester {
 
@@ -9,6 +10,7 @@ public class MoodTester {
 
     @Test
     public void testMood() {
-        System.out.println(obj.analyseMood("Happy"));
+        assertEquals("Happy" , obj.analyseMood("I am in Happy mood"));
+        assertEquals("Sad" , obj.analyseMood("I am in Sad mood"));
     }
 }
