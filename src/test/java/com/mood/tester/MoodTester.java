@@ -12,5 +12,6 @@ public class MoodTester {
     public void testMood() {
         assertEquals("Happy" , obj.analyseMood("I am in Happy mood"));
         assertEquals("Sad" , obj.analyseMood("I am in Sad mood"));
+        assertEquals("Happy" , obj.analyseMood("I am in Any mood"));
     }
 }
