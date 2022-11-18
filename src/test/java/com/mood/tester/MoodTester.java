@@ -1,6 +1,7 @@
 package com.mood.tester;
 
 import com.mood.analyzer.MoodAnalyzer;
+import com.mood.analyzer.MoodAnalyzerEnum;
 import com.mood.analyzer.MoodAnalyzerException;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,7 +27,13 @@ public class MoodTester {
     }
 
     @Test
-    public void testNullMood() throws MoodAnalyzerException {
+    public void testNullMood() {
         System.out.println(MoodAnalyzer.invalidMoodAnalyser(null));
+    }
+
+    @Test
+    public void testEmptyMood() {
+        System.out.println(MoodAnalyzer.invalidMoodAnalyser(String.valueOf(MoodAnalyzerEnum.invalidMood)));
+        System.out.println(MoodAnalyzer.invalidMoodAnalyser(String.valueOf(MoodAnalyzerEnum.empty)));
     }
 }
